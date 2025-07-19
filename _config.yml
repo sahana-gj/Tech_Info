@@ -1,0 +1,19 @@
+title: Prabu Ponnan Docs
+description: A professional blog and documentation site.
+theme: just-the-docs
+
+url: https://p-prabu.github.io
+baseurl: "/docs"
+
+# Navigation
+nav:
+  - title: "Home"
+    url: "/docs/"
+  - title: "About"
+    url: "/docs/about"
+  - title: "Docs"
+    children:
+      - title: "Active Directory"
+        url: "/docs/active-directory/"
+      - title: "PowerShell"
+        url: "/docs/powershell/"
