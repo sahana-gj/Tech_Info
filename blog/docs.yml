@@ -12,3 +12,4 @@
   posts:
     - title: Securing AD in 2025
       file: posts/ad-security.md
+      file: posts/ad-best-practices.md
