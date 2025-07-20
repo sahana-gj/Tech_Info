@@ -25,3 +25,11 @@ async function loadYAML() {
     categoryList.appendChild(details);
   });
 }
+
+async function loadMarkdown(filePath) {
+  const res = await fetch(filePath);
+  const mdText = await res.text();
+  document.getElementById('postContent').innerHTML = marked.parse(mdText);
+}
+
+loadYAML();

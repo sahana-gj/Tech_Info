@@ -15,18 +15,6 @@ body {
   border-right: 1px solid #ccc;
   overflow-y: auto;
 }
-#sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
-#sidebar li {
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  color: #007acc;
-}
-#sidebar li:hover {
-  text-decoration: underline;
-}
 main {
   flex: 1;
   padding: 1rem;
@@ -40,19 +28,16 @@ h1, h2 {
   cursor: pointer;
   padding: 0.3rem 0;
 }
-
 .category ul {
   list-style: none;
   padding-left: 1rem;
   margin: 0;
 }
-
 .category li {
   cursor: pointer;
   color: #007acc;
   margin-bottom: 0.3rem;
 }
-
 .category li:hover {
   text-decoration: underline;
 }
