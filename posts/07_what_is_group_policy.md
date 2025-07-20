@@ -1,5 +1,5 @@
 
-# What is Group Policy?
+
 
 ## Overview of Group Policy
 **Group Policy** is a powerful feature in Active Directory that allows IT administrators to manage and configure system and user settings for computers and users in the domain.

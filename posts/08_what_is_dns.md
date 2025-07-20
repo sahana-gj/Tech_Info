@@ -1,5 +1,4 @@
 
-# What is DNS in Active Directory?
 
 ## Importance of DNS in AD
 **DNS (Domain Name System)** is an integral part of Active Directory because it is used to resolve domain names into IP addresses, allowing domain controllers to locate each other and clients to locate services such as email and file servers.

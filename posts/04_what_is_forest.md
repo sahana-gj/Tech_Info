@@ -1,5 +1,5 @@
 
-# What is a Forest in Active Directory?
+
 
 ## Understanding Forests
 In Active Directory, a **forest** is the top-most container in the AD hierarchy and consists of one or more domains that share a common schema, configuration, and global catalog. A forest represents a complete instance of Active Directory.

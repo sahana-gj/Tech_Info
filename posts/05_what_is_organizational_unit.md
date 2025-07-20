@@ -1,5 +1,5 @@
 
-# What is an Organizational Unit (OU)?
+
 
 ## Organizational Units Explained
 An **Organizational Unit (OU)** is a container within Active Directory that helps to organize objects such as users, groups, and computers. OUs provide a way to delegate administrative control over subsets of objects, making them easier to manage.

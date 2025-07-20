@@ -1,5 +1,5 @@
 
-# What is a Group in Active Directory?
+
 
 ## Types of Groups
 In Active Directory, a **group** is a collection of users, computers, or other groups. Groups are used to manage permissions and access to resources efficiently. There are two main types of groups:

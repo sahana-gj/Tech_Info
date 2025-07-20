@@ -1,6 +1,3 @@
-
-# What is Active Directory?
-
 ## Overview
 Active Directory (AD) is a directory service developed by Microsoft to provide a centralized way to manage network resources such as users, computers, printers, and other devices in a networked environment. It plays a critical role in modern enterprise IT infrastructures, providing a means of organizing and controlling access to resources.
 

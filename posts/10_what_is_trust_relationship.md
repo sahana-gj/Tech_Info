@@ -1,5 +1,5 @@
 
-# What is a Trust Relationship in AD?
+
 
 ## Trust Relationships Overview
 A **trust relationship** in Active Directory is a link between two domains that allows users in one domain to access resources in another domain. Trusts enable the sharing of resources and access control across multiple domains.

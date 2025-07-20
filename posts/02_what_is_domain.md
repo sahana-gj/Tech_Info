@@ -1,6 +1,3 @@
-
-# What is a Domain?
-
 ## Defining a Domain in AD
 A **domain** in Active Directory refers to a logical grouping of resources that share common rules and policies. It is the primary container for managing users, groups, and computers within a network. A domain is identified by a unique name, such as "company.com".
 

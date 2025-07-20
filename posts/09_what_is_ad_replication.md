@@ -1,5 +1,5 @@
 
-# What is AD Replication?
+
 
 ## Understanding AD Replication
 **Active Directory Replication** is the process by which changes made to one domain controller in an AD environment are propagated to other domain controllers. It ensures consistency and availability of data across the network.

@@ -1,5 +1,4 @@
 
-# What is a Domain Controller (DC)?
 
 ## Role of a Domain Controller
 A **Domain Controller (DC)** is a server that is responsible for authenticating users, enforcing security policies, and storing a copy of the Active Directory database. It ensures that users and computers within a domain can log in and access network resources securely.
