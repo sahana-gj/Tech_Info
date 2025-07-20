@@ -12,4 +12,5 @@
   posts:
     - title: Securing AD in 2025
       file: posts/ad-security.md
-      file: posts/ad-best-practices.md
+    - title: Azure Password Protection
+      file: posts/azure-password-protection.md

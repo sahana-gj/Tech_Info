@@ -41,3 +41,62 @@ h1, h2 {
 .category li:hover {
   text-decoration: underline;
 }
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #toggleSidebar {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  #categoryList {
+    display: none;
+  }
+
+  #categoryList.show {
+    display: block;
+  }
+}
+#toc {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-left: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+#toc ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.9rem;
+}
+
+#toc li {
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  color: #007acc;
+}
+
+#toc li:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  #toc {
+    display: none;
+  }
+}

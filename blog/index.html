@@ -7,17 +7,25 @@
 </head>
 <body>
   <div class="container">
-    <aside id="sidebar">
-      <h2>📚 Blog Topics</h2>
-      <div id="categoryList"></div>
-    </aside>
-    <main>
-      <article id="postContent">
-        <h1>Welcome 👋</h1>
-        <p>Select a topic from the left to read.</p>
-      </article>
-    </main>
-  </div>
+  <aside id="sidebar">
+    <h2>📚 Blog Topics</h2>
+    <input type="text" id="searchInput" placeholder="Search topics..." />
+    <button id="toggleSidebar">☰ Menu</button>
+    <div id="categoryList"></div>
+  </aside>
+
+  <main>
+    <article id="postContent">
+      <h1>Welcome 👋</h1>
+      <p>Select a topic from the left to read.</p>
+    </article>
+  </main>
+
+  <aside id="toc">
+    <h3>📌 Contents</h3>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
