@@ -5,21 +5,23 @@ async function loadYAML() {
   const categoryList = document.getElementById('categoryList');
 
   data.forEach(category => {
-    const catTitle = document.createElement('h3');
-    catTitle.textContent = category.category;
-    categoryList.appendChild(catTitle);
+    const details = document.createElement('details');
+    details.classList.add('category');
+
+    const summary = document.createElement('summary');
+    summary.textContent = category.category;
+    details.appendChild(summary);
+
+    const ul = document.createElement('ul');
 
     category.posts.forEach(post => {
       const li = document.createElement('li');
       li.textContent = post.title;
       li.onclick = () => loadMarkdown(post.file);
-      categoryList.appendChild(li);
+      ul.appendChild(li);
     });
+
+    details.appendChild(ul);
+    categoryList.appendChild(details);
   });
 }
-async function loadMarkdown(filePath) {
-  const res = await fetch(filePath);
-  const mdText = await res.text();
-  document.getElementById('postContent').innerHTML = marked.parse(mdText);
-}
-loadYAML();

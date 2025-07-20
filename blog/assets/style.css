@@ -35,3 +35,24 @@ main {
 h1, h2 {
   color: #333;
 }
+.category summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.3rem 0;
+}
+
+.category ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.category li {
+  cursor: pointer;
+  color: #007acc;
+  margin-bottom: 0.3rem;
+}
+
+.category li:hover {
+  text-decoration: underline;
+}
