@@ -1,24 +1,39 @@
-
-- title: Welcome to My Blog
-  path: posts/welcome.md
-  category: General
-
-- title: PowerShell Tips & Tricks
-  path: posts/powershell-tips.md
-  category: PowerShell
-
-- title: Securing AD in 2025
-  path: posts/ad-security.md
+- title: What is Active Directory?
+  path: posts/01_what_is_active_directory.md
   category: Active Directory
 
-- title: Az Password Protection
-  path: posts/azpassword-protection.md
+- title: What is a Domain?
+  path: posts/02_what_is_domain.md
   category: Active Directory
 
-- title: Entra Hybrid Setup Guide
-  path: posts/entra-setup.md
-  category: Entra ID
+- title: What is a Domain Controller?
+  path: posts/03_what_is_domain_controller.md
+  category: Active Directory
 
-- title: Group Policy Hardening
-  path: posts/gpo-hardening.md
-  category: GPO
+- title: What is a Forest in Active Directory?
+  path: posts/04_what_is_forest.md
+  category: Active Directory
+
+- title: What is an Organizational Unit?
+  path: posts/05_what_is_organizational_unit.md
+  category: Active Directory
+
+- title: What is a Group in Active Directory?
+  path: posts/06_what_is_group.md
+  category: Active Directory
+
+- title: What is Group Policy?
+  path: posts/07_what_is_group_policy.md
+  category: Active Directory
+
+- title: What is DNS in Active Directory?
+  path: posts/08_what_is_dns.md
+  category: Active Directory
+
+- title: What is AD Replication?
+  path: posts/09_what_is_ad_replication.md
+  category: Active Directory
+
+- title: What is a Trust Relationship in Active Directory?
+  path: posts/10_what_is_trust_relationship.md
+  category: Active Directory
