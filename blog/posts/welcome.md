@@ -1,11 +1,39 @@
-# Welcome to My Blog
+---
+layout: default
+title: Welcome
+nav_order: 1
+---
 
-This is my first blog post! 🚀
+# 👋 Welcome to My Blog
 
-## What You’ll Find
+I'm **Prabu Ponnan**, an Active Directory Specialist with 10+ years of experience in identity management, automation, and infrastructure delivery across global enterprises.
 
-- Tech tips
-- PowerShell scripts
-- Active Directory guides
+This blog is a space where I share **technical insights, scripts, and learnings** focused on:
 
-Stay tuned for weekly updates.
+- 🛡️ Active Directory (on-prem and hybrid)
+- 🔐 ADFS, PKI, Entra (Azure AD) Connect
+- ⚙️ PowerShell scripting & automation
+- 📊 AD health checks, onboarding tools, and factory rollouts
+
+---
+
+## 🧠 What You'll Find Here
+
+- 📝 **Blog posts** sharing technical guides and how-to tutorials  
+- 📁 **PowerShell scripts** used in real-world projects  
+- 🧰 **Tips** for AD assessments, deployments, and disaster recovery  
+- 📚 My resume, certifications, and project portfolio
+
+---
+
+## 🚀 Skills Snapshot
+
+- **Identity & Access**: Active Directory, ADFS, Entra Connect  
+- **Automation**: PowerShell (advanced), Ansible (basic)  
+- **Infrastructure**: DNS, GPOs, Windows Server 2016–2022  
+- **Documentation**: GitHub-based SOPs, HLDs, compliance reports
+
+---
+
+Thanks for visiting!  
+If this content helps you, feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/prabu-ponnan-ab4803b0/) or reach out at **pprabu.in@gmail.com**.
