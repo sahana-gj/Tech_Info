@@ -1,9 +1,3 @@
----
-layout: default
-title: Azure AD Password Protection: Securing Your Organization Against Weak Passwords
-nav_order: 2
----
-
 # 🔐 Azure AD Password Protection: Securing Your Organization
 
 Weak passwords are one of the most common attack vectors. With Azure AD Password Protection, organizations can block commonly used and predictable passwords to significantly improve security posture — both in the cloud and on-premises.
