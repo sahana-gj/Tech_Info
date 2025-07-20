@@ -16,7 +16,7 @@ This blog is a space where I share **technical insights, scripts, and learnings*
 - 📝 **Blog posts** sharing technical guides and how-to tutorials  
 - 📁 **PowerShell scripts** used in real-world projects  
 - 🧰 **Tips** for AD assessments, deployments, and disaster recovery  
-- 📚 My resume, certifications, and project portfolio
+
 
 ---
 
@@ -30,4 +30,4 @@ This blog is a space where I share **technical insights, scripts, and learnings*
 ---
 
 Thanks for visiting!  
-If this content helps you, feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/prabu-ponnan-ab4803b0/) or reach out at **pprabu.in@gmail.com**.
+If this content helps you, feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/prabu-ponnan-ab4803b0/)
