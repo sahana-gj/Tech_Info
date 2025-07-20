@@ -82,7 +82,3 @@ In this post, we covered:
 - How Azure AD Password Protection works
 - Setup instructions for both cloud and on-prem environments
 - Real-world examples of blocked password attempts
-
----
-
-For more technical guides and PowerShell automation tips, explore my [blog homepage](./welcome.md) or [connect with me on LinkedIn](https://www.linkedin.com/in/prabuponnan).
