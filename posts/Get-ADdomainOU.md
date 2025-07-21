@@ -215,3 +215,5 @@ Write-Host "Export completed. The list of OUs has been saved to $outputPath"
    ```powershell
    Get-ADDomainOU -Domain
    ```
+### Download/copy the Powershell script
+[Get-ADdomainOU](Get-ADdomainOU.ps1)
