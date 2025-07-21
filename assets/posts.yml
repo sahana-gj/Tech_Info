@@ -82,6 +82,46 @@
   path: posts/20_what_is_adds.md
   category: Active Directory
 
+- title: What is a Security Group?
+  path: posts/21_what_is_security_group.md
+  category: Active Directory
+
+- title: What is a Distribution Group?
+  path: posts/22_what_is_distribution_group.md
+  category: Active Directory
+
+- title: What is an Admin Template?
+  path: posts/23_what_is_admin_template.md
+  category: Active Directory
+
+- title: What is DSRM?
+  path: posts/24_what_is_dsrm.md
+  category: Active Directory
+
+- title: What is Password Policy?
+  path: posts/25_what_is_password_policy.md
+  category: Active Directory
+
+- title: What is the Global Catalog?
+  path: posts/26_what_is_global_catalog.md
+  category: Active Directory
+
+- title: What is the Schema Master?
+  path: posts/27_what_is_schema_master.md
+  category: Active Directory
+
+- title: What is the RID Master?
+  path: posts/28_what_is_rid_master.md
+  category: Active Directory
+
+- title: What is the PDC Emulator?
+  path: posts/29_what_is_pdc_emulator.md
+  category: Active Directory
+
+- title: What is Time Synchronization in AD?
+  path: posts/30_what_is_time_sync.md
+  category: Active Directory
+
 - title: Get Organizational Unit Report
   path: posts/Get-ADdomainOU.md
   category: Active Directory
