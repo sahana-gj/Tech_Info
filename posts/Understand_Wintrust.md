@@ -1,0 +1,170 @@
+## Microsoft WinVerifyTrust Signature Validation Vulnerability (CVE-2013-3900)
+
+### 🔍 Overview
+
+This vulnerability affects the **WinVerifyTrust API**, which Windows uses to validate digitally signed files such as `.exe`, `.dll`, and `.sys` files.
+
+By default, Windows may trust a file as long as it has a valid digital signature — even if **malicious data is added after the signature**. Attackers can exploit this weakness to **bypass signature validation** and run tampered, malicious software.
+
+---
+
+## 🔍 Background – What Is the Issue?
+
+`Wintrust.dll` is a core Windows component used to validate the authenticity of software, drivers, and certificates.
+
+### 🔒 Registry Fix and Its Impact
+
+To fix this vulnerability, Microsoft provided a **registry-based control** that enables stricter digital signature validation.
+
+**Registry paths created (if not present):**
+- `HKLM\Software\Microsoft\Cryptography\Wintrust\Config`
+- `HKLM\Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config`
+
+**Registry value added to both paths:**
+```reg
+Name: EnableCertPaddingCheck
+Type: DWORD
+Value: 1
+```
+
+#### ✅ When the registry key is applied:
+
+* Windows will **strictly enforce** signature verification.
+* If a file has been **tampered with**, even if it's digitally signed, it will **fail validation**.
+* This helps prevent **malicious signed drivers or scripts** from running.
+
+#### ❌ Before applying the registry:
+
+* Tampered signed files may still be considered valid by Windows.
+* This creates a **security risk**, especially on Domain Controllers.
+
+---
+
+### 🧠 Important Notes
+
+* The registry fix **does not impact Active Directory authentication**.
+* Services like **Kerberos, LDAP, and NTLM** will continue to function as usual.
+* This change **only affects digital signature validation of files**, not authentication protocols.
+
+---
+
+### 🔐 What it Affects
+
+| Component                    | Description                                                           |
+| ---------------------------- | --------------------------------------------------------------------- |
+| Digitally signed files       | Strict validation of `.exe`, `.dll`, `.sys`, etc.                     |
+| Tampered signed files        | These will be blocked from running.                                   |
+| Malicious drivers or scripts | May be blocked if they use padding tricks to bypass signature checks. |
+
+---
+
+### ❌ What it Does **NOT** Affect
+
+| Component      | Impact                                                      |
+| -------------- | ----------------------------------------------------------- |
+| Kerberos       | ❌ No impact – ticket-based authentication continues to work |
+| LDAP           | ❌ No impact – not related to file validation                |
+| NTLM           | ❌ No impact – uses challenge-response protocol              |
+| Group Policy   | ❌ No impact unless it uses tampered signed scripts          |
+| SYSVOL/Scripts | ❌ Only affected if scripts are improperly signed            |
+
+---
+
+### ⚠️ Things to Check Before Applying
+
+If your environment includes:
+
+* **Custom logon scripts**
+* **Startup tasks**
+* **Scheduled tasks**
+* Or any tools that rely on **digitally signed executables**
+
+...make sure those files are **properly signed**. If they have extra data or invalid signatures, they may fail after enabling the registry fix.
+
+✅ Best practice:
+
+* Test the change on **one Domain Controller** first.
+* Reboot the server after applying the registry key.
+* Monitor `Application` and `System` event logs.
+* Confirm that login scripts and GPOs apply correctly.
+
+---
+
+### 👨‍💻 Patch Information
+
+| Detail                 | Info                                                         |
+| ---------------------- | ------------------------------------------------------------ |
+| CVE ID                 | CVE-2013-3900                                                |
+| First Reported         | December 2013                                                |
+| Fix for Older OS       | KB2917500 (Windows 7/8, Server 2008/2012)                    |
+| Server 2016/2019/2022  | Fix already included in base OS or cumulative updates        |
+| Registry Key Required  | ✅ Yes (manually set)                                         |
+| Enforced by default?   | ❌ No – must enable registry manually                         |
+| Still relevant in 2025 | ✅ Yes – often detected by vulnerability scanners like Qualys |
+
+
+### Script to validate the Registry
+
+```Powershell 
+
+Import-Module ActiveDirectory
+
+$dcs = Get-ADDomainController -Filter *
+
+
+foreach ($dc in $dcs) {
+    Write-Host "`nChecking registry on $($dc.HostName)..." -ForegroundColor Cyan
+
+    Invoke-Command -ComputerName $dc.HostName -ScriptBlock {
+        $paths = @(
+            "HKLM:\Software\Microsoft\Cryptography\Wintrust\Config",
+            "HKLM:\Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config"
+        )
+
+        foreach ($path in $paths) {
+            if (Test-Path $path) {
+                $value = Get-ItemProperty -Path $path -Name "EnableCertPaddingCheck" -ErrorAction SilentlyContinue
+                if ($value -ne $null) {
+                    Write-Output "$path - EnableCertPaddingCheck = $($value.EnableCertPaddingCheck)"
+                } else {
+                    Write-Output "$path - EnableCertPaddingCheck not found"
+                }
+            } else {
+                Write-Output "$path - Registry path not found"
+            }
+        }
+    } -ErrorAction Continue
+}
+
+
+```
+
+
+### Script to Apply the Registry
+
+```Powershell 
+Import-Module ActiveDirectory
+ 
+$dcs = Get-ADDomainController -Filter *
+ 
+ 
+foreach ($dc in $dcs) {
+    Write-Host "Applying registry update on $($dc.HostName)..." -ForegroundColor Cyan
+ 
+    Invoke-Command -ComputerName $dc.HostName -ScriptBlock {
+        $paths = @(
+            "HKLM:\Software\Microsoft\Cryptography\Wintrust\Config",
+            "HKLM:\Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config"
+        )
+ 
+        foreach ($path in $paths) {
+            New-Item -Path $path -Force | Out-Null
+            New-ItemProperty -Path $path -Name "EnableCertPaddingCheck" -Value 1 -PropertyType DWord -Force | Out-Null
+        }
+ 
+        Write-Output "Registry updated successfully."
+    } -ErrorAction Continue
+}
+
+
+```
