@@ -41,3 +41,11 @@
 - title: What is a Trust Relationship in Active Directory?
   path: posts/10_what_is_trust_relationship.md
   category: Active Directory
+
+- title: Get Organizational Unit Report
+  path: posts/Get-ADdomainOU.md
+  category: Active Directory
+
+- title: Get Organizational Unit Script
+  path: posts/Get-ADdomainOU.ps1
+  category: Active Directory
