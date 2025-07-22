@@ -1,3 +1,9 @@
+
+## Author
+- **Author:** Prabu Ponnan
+- **Version:** 1.0
+- **Date:** July 16, 2025
+
 ## Overview
 Active Directory (AD) is a directory service developed by Microsoft to provide a centralized way to manage network resources such as users, computers, printers, and other devices in a networked environment. It plays a critical role in modern enterprise IT infrastructures, providing a means of organizing and controlling access to resources.
 

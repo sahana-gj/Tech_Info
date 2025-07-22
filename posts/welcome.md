@@ -1,6 +1,3 @@
-
-I'm **Prabu Ponnan**, an Active Directory Specialist with 10+ years of experience in identity management, automation, and infrastructure delivery across global enterprises.
-
 This blog is a space where I share **technical insights, scripts, and learnings** focused on:
 
 - 🛡️ Active Directory (on-prem and hybrid)
