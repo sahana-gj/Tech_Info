@@ -135,5 +135,5 @@
   category: Active Directory
 
 - title: MC1113050 RPC_Anonymous_Netlogon
-  path: posts/RPC_Anonymous_Netlogon _protocol.md
+  path: posts/RPC_Anonymous_Netlogon_protocol.md
   category: CVE
