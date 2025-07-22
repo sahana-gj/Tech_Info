@@ -6,6 +6,10 @@
   path: posts/CVE_2013_3900_Wintrust_Vulnerability.md
   category: CVE
 
+  - title: MC1113050 RPC_Anonymous_Netlogon
+  path: posts/RPC_Anonymous_Netlogon _protocol.md
+  category: CVE
+
 - title: What is Active Directory?
   path: posts/01_what_is_active_directory.md
   category: Active Directory
