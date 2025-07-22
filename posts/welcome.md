@@ -11,19 +11,7 @@ This blog is a space where I share **technical insights, scripts, and learnings*
 
 - 📝 **Blog posts** sharing technical guides and how-to tutorials  
 - 📁 **PowerShell scripts** used in real-world projects  
-- 🧰 **Tips** for AD assessments, deployments, and disaster recovery  
-- 📚 My resume, certifications, and project portfolio
 
----
-
-## 🚀 Skills Snapshot
-
-- **Identity & Access**: Active Directory, ADFS, Entra Connect  
-- **Automation**: PowerShell (advanced), Ansible (basic)  
-- **Infrastructure**: DNS, GPOs, Windows Server 2016–2022  
-- **Documentation**: GitHub-based SOPs, HLDs, compliance reports
-
----
 
 Thanks for visiting!  
 If this content helps you, feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/prabu-ponnan-ab4803b0/)
