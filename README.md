@@ -30,4 +30,4 @@ This blog is a space where I share **technical insights, scripts, and learnings*
 ---
 
 Thanks for visiting!  
-If this content helps you, feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/prabu-ponnan-ab4803b0/)
+If this content helps you, feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/sahana-gangoor-jayaram-1a7816190/)

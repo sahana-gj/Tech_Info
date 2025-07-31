@@ -137,3 +137,8 @@
 - title: CVE_MC1113050 RPC_Anonymous_Netlogon
   path: posts/RPC_Anonymous_Netlogon_protocol.md
   category: CVE
+
+
+- title: Enable vTPM on Azure DCs
+  path: posts/How-to-Enable-vTPM-on-AZ-DCs.md
+  category: KB
